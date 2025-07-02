@@ -1,16 +1,16 @@
-# BANCO DE DADOS - PROJETO CÃOLETA
+# BANCO DE DADOS - PROJETO CÃOLETA 🐶
 
 Este repositório contém os arquivos e a documentação para um projeto de banco de dados **MySQL**. O objetivo é demonstrar a estrutura, criação e manipulação de um banco de dados utilizando **MySQL**.
 
 ---
 
-## SOBRE O PROJETO
+## SOBRE O PROJETO 💡
 
 O Projeto Cãoleta é um aplicativo criado como proposta de solução para o problema do descarte incorreto dos desejos sólidos de animais domésticos como cães e gatos, buscando reduzir a poluição ambiental causada pela prática do descarte incorreto, incentivando um sistema sustentável de coleta e transformação do material orgânico em biofertilizantes destinados à jardinagem e arborização, bem como em geração de energia limpa e renovável. O aplicativo do Projeto Cãoleta visa incentivar o descarte correto por meio da obtenção de pontos a cada coleta realizada corretamente que poderão ser utilizados, posteriormente, para trocar por produtos e benefícios para o seu animal de estimação.
 
 ---
 
-## CONTEÚDO DO BANCO DE DADOS
+## CONTEÚDO DO BANCO DE DADOS 📊
 
 Neste projeto estão inclusos:
 
@@ -24,7 +24,7 @@ Neste projeto estão inclusos:
 
 ---
 
-## COMO EXECUTAR O PROJETO
+## COMO EXECUTAR O PROJETO ⚙️
 
 Para configurar e executar este projeto, será necessário fazer uso do MySQL Workbench que é recomendado para facilitar a interação com o banco de dados.
 
@@ -32,7 +32,7 @@ Para configurar e executar este projeto, será necessário fazer uso do MySQL Wo
 
 ---
 
-## UTILIZAÇÃO
+## UTILIZAÇÃO 🛠️
 
 Após a configuração, o banco de dados estará pronto para uso. Você pode:
 
@@ -42,6 +42,6 @@ Após a configuração, o banco de dados estará pronto para uso. Você pode:
 
 ---
 
-## CONTRIBUIÇÃO
+## CONTRIBUIÇÃO ✨
 Contribuições são bem-vindas. Por favor, abra uma issue para relatar bugs ou sugerir melhorias ou envie um pull request com suas alterações.
 
