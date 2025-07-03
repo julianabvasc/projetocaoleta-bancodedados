@@ -41,8 +41,8 @@ CREATE TABLE IF NOT EXISTS `ProjetoCaoleta`.`Telefone` (
   CONSTRAINT `fk_Telefone_Usuario`
     FOREIGN KEY (`Usuario_CPF`)
     REFERENCES `ProjetoCaoleta`.`Usuario` (`CPF`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -62,8 +62,8 @@ CREATE TABLE IF NOT EXISTS `ProjetoCaoleta`.`Endereco` (
   CONSTRAINT `fk_Endereco_Coleta1`
     FOREIGN KEY (`Coleta_idColeta`)
     REFERENCES `ProjetoCaoleta`.`Coleta` (`idColeta`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -81,8 +81,8 @@ CREATE TABLE IF NOT EXISTS `ProjetoCaoleta`.`Pet` (
   CONSTRAINT `fk_Pet_Usuario1`
     FOREIGN KEY (`Usuario_CPF`)
     REFERENCES `ProjetoCaoleta`.`Usuario` (`CPF`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -109,8 +109,8 @@ CREATE TABLE IF NOT EXISTS `ProjetoCaoleta`.`Coleta_Usuario` (
   CONSTRAINT `fk_Coleta_has_Usuario_Coleta1`
     FOREIGN KEY (`Coleta_idColeta`)
     REFERENCES `ProjetoCaoleta`.`Coleta` (`idColeta`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_Coleta_has_Usuario_Usuario1`
     FOREIGN KEY (`Usuario_CPF`)
     REFERENCES `ProjetoCaoleta`.`Usuario` (`CPF`)
@@ -135,8 +135,8 @@ CREATE TABLE IF NOT EXISTS `ProjetoCaoleta`.`Endereco` (
   CONSTRAINT `fk_Endereco_Coleta1`
     FOREIGN KEY (`Coleta_idColeta`)
     REFERENCES `ProjetoCaoleta`.`Coleta` (`idColeta`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -162,13 +162,13 @@ CREATE TABLE IF NOT EXISTS `ProjetoCaoleta`.`Pontos_Usuario` (
   CONSTRAINT `fk_Pontos_has_Usuario_Pontos1`
     FOREIGN KEY (`Pontos_idPontos`)
     REFERENCES `ProjetoCaoleta`.`Pontos` (`idPontos`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_Pontos_has_Usuario_Usuario1`
     FOREIGN KEY (`Usuario_CPF`)
     REFERENCES `ProjetoCaoleta`.`Usuario` (`CPF`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -184,13 +184,13 @@ CREATE TABLE IF NOT EXISTS `ProjetoCaoleta`.`Pontos_Coleta` (
   CONSTRAINT `fk_Pontos_has_Coleta_Pontos1`
     FOREIGN KEY (`Pontos_idPontos`)
     REFERENCES `ProjetoCaoleta`.`Pontos` (`idPontos`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_Pontos_has_Coleta_Coleta1`
     FOREIGN KEY (`Coleta_idColeta`)
     REFERENCES `ProjetoCaoleta`.`Coleta` (`idColeta`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -217,13 +217,13 @@ CREATE TABLE IF NOT EXISTS `ProjetoCaoleta`.`Troca_Usuario` (
   CONSTRAINT `fk_Troca_has_Usuario_Troca1`
     FOREIGN KEY (`Troca_idTroca`)
     REFERENCES `ProjetoCaoleta`.`Troca` (`idTroca`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_Troca_has_Usuario_Usuario1`
     FOREIGN KEY (`Usuario_CPF`)
     REFERENCES `ProjetoCaoleta`.`Usuario` (`CPF`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -242,8 +242,8 @@ CREATE TABLE IF NOT EXISTS `ProjetoCaoleta`.`Produto` (
   CONSTRAINT `fk_Produto_Troca1`
     FOREIGN KEY (`Troca_idTroca`)
     REFERENCES `ProjetoCaoleta`.`Troca` (`idTroca`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -273,18 +273,16 @@ CREATE TABLE IF NOT EXISTS `ProjetoCaoleta`.`Empresa_Produto` (
   CONSTRAINT `fk_Empresa_has_Produto_Empresa1`
     FOREIGN KEY (`Empresa_CNPJ`)
     REFERENCES `ProjetoCaoleta`.`Empresa` (`CNPJ`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_Empresa_has_Produto_Produto1`
     FOREIGN KEY (`Produto_idProduto`)
     REFERENCES `ProjetoCaoleta`.`Produto` (`idProduto`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
-
